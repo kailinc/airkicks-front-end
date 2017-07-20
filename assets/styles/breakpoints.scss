@@ -1,0 +1,23 @@
+// @import 'breakpoint';
+// @import 'typography';
+// @import 'theme';
+// body {
+//   @include breakpoint(tiny) {
+//     margin: $line-height * 0.8;
+//     margin: $vertical-margin * 0.5 auto;
+//     padding: 0 $horizontal-padding *.5;
+//   }
+// }
+// h1 {
+//   @include breakpoint(tiny) {
+//     font-size: 3.5em;
+//   }
+// }
+//
+// .quote {
+//   @include breakpoint(tiny) {
+//     font-size: 1.3em;
+//     margin: 30px 20px;
+//     padding: 20px;
+//   }
+// }
