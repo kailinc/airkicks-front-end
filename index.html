@@ -40,37 +40,33 @@
     <div class="jumbotron">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <h1>Welcome, <span class="em-text">Friends</span></h1>
             <p>Air Kicks is a fun way to share your shoes to the World.</p>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-          </div>
-          <div class="col-md-6">
-            <div class="container">
+
+          <div class="col-md-4 col-centered">
               <form>
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                  <label for="inputEmail3" class="col-sm-4 col-md-4 col-form-label">Email</label>
+                  <div class="col-sm-4">
+                    <input type="email" name="form[email]" class="form-control" id="loginEmail" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                  <label for="inputPassword3" class="col-sm-4 col-md-2 col-form-label">Password</label>
+                  <div class="col-sm-4">
+                    <input type="password" name="form[password]" class="form-control" id="loginPassword" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="offset-sm-2 col-sm-10">
+                  <div class="offset-sm-2 col-sm-4 col-md-2">
                     <button type="submit" class="btn btn-primary">Sign in</button>
                   </div>
                 </div>
               </form>
-            </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -108,31 +104,31 @@
                 <div class="form-group row">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">First Name</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="signUpFirstName" placeholder="First Name">
+                    <input type="text" class="form-control" name="credentials[first_name]" id="signUpFirstName" placeholder="First Name">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Last Name</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="signUpLastName" placeholder="Last Name">
+                    <input type="text" class="form-control" name="credentials[last_name]" id="signUpLastName" placeholder="Last Name">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="signUpEmail" placeholder="Email">
+                    <input type="email" class="form-control" name="credentials[email]" id="signUpEmail" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="signUpPassword" placeholder="Password">
+                    <input type="password" class="form-control" name="credentials[password]" id="signUpPassword" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputPassword3" class="col-sm-2 col-form-label">Password Confirmation</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="confirmPassword" placeholder="Password Confirmation">
+                    <input type="password" class="form-control" name="credentials[password_confirmation]" id="confirmPassword" placeholder="Password Confirmation">
                   </div>
                 </div>
                 <div class="form-group row">
