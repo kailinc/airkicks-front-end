@@ -5,6 +5,12 @@ const config = require('./config')
 
 $(() => {
   setAPIOrigin(location, config)
+
+  // clear forms
+  // $('.btn-primary').on('click', function (e) {
+  //   e.preventDefault()
+  //   $('.form-control').val('')
+  // })
 })
 
 // use require with a reference to bundle the file and use it in this file
