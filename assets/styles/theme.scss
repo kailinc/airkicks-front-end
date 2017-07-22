@@ -14,10 +14,18 @@ body {
 }
 
 .jumbotron{
-	background: #1b222a url(../img/landingImg.jpg) no-repeat left center;
 	color: #fff;
 	height: 700px;
 	overflow: none;
+}
+
+#outJumbotron{
+	background: #1b222a url(../img/landingImg.jpg) no-repeat left center;
+}
+
+#inJumbotron {
+  background: url(../img/in.jpg) no-repeat left center;
+  height: 500px;
 }
 
 .jumbotron h1{

@@ -18,34 +18,34 @@ const signIn = function (data) {
   })
 }
 
-// const changePwd = function (data) {
-//   // console.log(data)
-//   // console.log(store)
-//   return $.ajax({
-//     method: 'PATCH',
-//     url: config.apiOrigin + '/change-password/' + store.user.id,
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-// }
-//
-// const logOut = function () {
-//   // console.log(store.user.id)
-//   // console.log(store.user.id)
-//   return $.ajax({
-//     url: config.apiOrigin + '/sign-out/' + store.user.id,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-//
+const changePwd = function (data) {
+  // console.log(data)
+  // console.log(store)
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiOrigin + '/change-password/' + store.user.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const logOut = function () {
+  // console.log(store.user.id)
+  // console.log(store.user.id)
+  return $.ajax({
+    url: config.apiOrigin + '/sign-out/' + store.user.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   add,
-  signIn
-  // changePwd,
-  // logOut
+  signIn,
+  logOut,
+  changePwd
 }

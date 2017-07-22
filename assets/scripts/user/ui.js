@@ -3,6 +3,7 @@ const store = require('../store')
 
 const onSignUpSuccess = function () {
   console.log('good job')
+  console.log('sign it in or go to the top of the page')
 }
 
 const onSignUpError = function (error) {
@@ -21,39 +22,38 @@ const onSignInError = function (error) {
   console.log(error)
 }
 
-// const onChangeSuccess = function () {
-//   $('.changePassword input').css('background-color', '#228a11')
-//   $('#signInMsg').text('Your password is successfully changed!')
-// }
-// const onChangeError = function () {
-//   $('.changePassword input').css('background-color', 'red')
-//   $('#signInMsg').text('There was a problem with changing password')
-// }
-//
-// const onLogOutSuccess = function () {
-//   // console.log('logged out')
-//   store.user = null
-//   $('#board li').removeClass('disable').removeClass('x').removeClass('o').text(' ')
-//   $('.userForms input').css('background-color', 'white')
-//   $('.userOut').css('display', 'none')
-//   $('.userIn').css('display', 'block')
-//   $('#gameResult').text('Tic Tac Toe')
-//   $('#signInMsg').text('')
-//   $('.totalWins h3').text('')
-//   $('.localStats').text('0')
-// }
-//
-// const onLogOutError = function () {
-//   // console.log(error)
-// }
+const onChangePwdSuccess = function () {
+  $('#changePwdModal').modal('hide')
+  console.log('you have changed your password')
+  console.log('clear forms')
+}
+const onChangePwdError = function (error) {
+  console.log(error)
+  alert('try again buddy')
+  console.log('clear forms')
+  console.log('password not correct')
+}
 
+const onLogOutSuccess = function () {
+  // console.log('logged out')
+  store.user = null
+  $('#landingPage').css('display', 'block')
+  $('#innerPage').css('display', 'none')
+  console.log('clear all forms')
+}
+
+const onLogOutError = function (error) {
+  console.log(error)
+}
+
+// have a function to clear all forms
 module.exports = {
   onSignUpSuccess,
   onSignUpError,
   onSignInSuccess,
-  onSignInError
-  // onLogOutSuccess,
-  // onLogOutError,
-  // onChangeSuccess,
-  // onChangeError
+  onSignInError,
+  onLogOutSuccess,
+  onLogOutError,
+  onChangePwdSuccess,
+  onChangePwdError
 }
