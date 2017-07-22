@@ -26,6 +26,7 @@ body {
 #inJumbotron {
   background: url(../img/in.jpg) no-repeat left center;
   height: 500px;
+  margin-bottom: 100px;
 }
 
 .jumbotron h1{
@@ -67,4 +68,12 @@ form {
 
 #innerPage {
   display: none;
+}
+
+button {
+  margin: 10px;
+}
+
+.optionBtn {
+  width: 150px;
 }
