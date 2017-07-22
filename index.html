@@ -96,7 +96,7 @@
     <section id="regester">
       <h1 class="headline">Sign Up</h1>
       <div class="container">
-        <form>
+        <form id="signUp">
           <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-md-offset-3 col-form-label">Email</label>
             <div class="col-sm-4">
@@ -126,6 +126,11 @@
 
   </div>
 
+
+
+
+<!-- LANDING PAGE -->
+
   <div id="innerPage">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -154,7 +159,7 @@
           </div>
           <div class="modal-body">
             <div class="col-sm-12">
-              <form>
+              <form id="changePwd">
                 <div class="form-group row">
                   <label for="inputPassword3" class="col-sm-4 col-form-label">Password</label>
                   <div class="col-sm-8">
@@ -167,12 +172,13 @@
                     <input type="password" name="passwords[new]" class="form-control" id="newPwd" placeholder="New Password">
                   </div>
                 </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
               </form>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" id="changePwdSave" class="btn btn-primary">Save changes</button>
-          </div>
+
         </div>
       </div>
     </div>

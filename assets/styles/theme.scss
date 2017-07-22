@@ -10,6 +10,7 @@ body {
 
 .em-text {
   color: $neon;
+  font-size: 2em;
 }
 
 .jumbotron{
@@ -56,9 +57,6 @@ form {
   }
 }
 
-.landingPage {
-  display:none;
+#innerPage {
+  display: none;
 }
-// #innerPage {
-//   display:none;
-// }
