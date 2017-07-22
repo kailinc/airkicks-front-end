@@ -11,18 +11,16 @@ const onSignUpError = function (error) {
   console.log(error)
 }
 
-// const onSignInSuccess = function (data) {
-//   store.user = data.user
-//   $('.signIn input').css('background-color', '#228a11')
-//   $('.userOut').css('display', 'block')
-//   $('.userIn').css('display', 'none')
-//   $('#signInMsg').text('')
-// }
-// const onSignInError = function () {
-//   $('.signIn input').css('background-color', 'red')
-//   $('#signInMsg').text('Either you ented your username/password wrong or the account does not exist').css('color', 'white')
-// }
-//
+const onSignInSuccess = function (data) {
+  $('#landingPage').css('display', 'none')
+  $('#innerPage').css('display', 'block')
+  store.user = data.user
+}
+const onSignInError = function (error) {
+  console.log('Either the password is wrong or the account does not exist')
+  console.log(error)
+}
+
 // const onChangeSuccess = function () {
 //   $('.changePassword input').css('background-color', '#228a11')
 //   $('#signInMsg').text('Your password is successfully changed!')
@@ -51,9 +49,9 @@ const onSignUpError = function (error) {
 
 module.exports = {
   onSignUpSuccess,
-  onSignUpError
-  // onSignInSuccess,
-  // onSignInError,
+  onSignUpError,
+  onSignInSuccess,
+  onSignInError
   // onLogOutSuccess,
   // onLogOutError,
   // onChangeSuccess,

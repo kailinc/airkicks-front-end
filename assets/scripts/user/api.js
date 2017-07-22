@@ -10,15 +10,14 @@ const add = function (data) {
   })
 }
 
-//
-// const signIn = function (data) {
-//   return $.ajax({
-//     url: config.apiOrigin + '/sign-in',
-//     method: 'POST',
-//     data
-//   })
-// }
-//
+const signIn = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/sign-in',
+    method: 'POST',
+    data
+  })
+}
+
 // const changePwd = function (data) {
 //   // console.log(data)
 //   // console.log(store)
@@ -45,8 +44,8 @@ const add = function (data) {
 // }
 //
 module.exports = {
-  add
-  // signIn,
+  add,
+  signIn
   // changePwd,
   // logOut
 }
