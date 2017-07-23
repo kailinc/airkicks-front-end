@@ -4,6 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const user = require('./user/events.js')
 const shoe = require('./shoe/events.js')
+const collection = require('./collection/events.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -18,4 +19,5 @@ require('./example')
 $(() => {
   user.addHandlers()
   shoe.addHandlers()
+  collection.addHandlers()
 })

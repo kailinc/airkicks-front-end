@@ -2,16 +2,16 @@
 const collectionStore = require('../store')
 
 const onAddSuccess = function (data) {
-  // $('#addShoeModal').modal('hide')
-  // // console.log(data)
-  // console.log('clear forms')
-  // console.log('shoe is added')
+  $('#createCollectionModal').modal('hide')
+  console.log(data)
+  console.log('clear forms')
+  console.log('collection is added')
 }
 const onAddError = function (error) {
-  // console.log(error)
+  console.log(error)
 }
 
 module.exports = {
-  // onAddSuccess,
-  // onAddError
+  onAddSuccess,
+  onAddError
 }
