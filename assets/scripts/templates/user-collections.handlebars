@@ -1,7 +1,7 @@
 {{#each collections as |collection|}}
-  <div class="col col-md-3 grid" data-shoe-id={{collection.id}} >
+  <div class="col col-md-3 grid" data-collection-id={{collection.id}} >
     <img src="assets/img/collection.png">
-    <h3> {{collection.name}} x </h3>
+    <h3> {{collection.name}}</h3>
     <p> {{collection.description}}</p>
     <button type="button" class="btn btn-primary viewCollectionBtn">View Collection</button>
     <button type="button" class="btn btn-primary editCollectionBtn">Edit Collection</button>
