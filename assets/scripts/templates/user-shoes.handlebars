@@ -1,0 +1,11 @@
+{{#each shoes as |shoe|}}
+  <div class="col col-md-3 grid" data-shoe-id={{shoe.id}} >
+    <img src="assets/img/run.png">
+    <h3> {{shoe.name}} x {{shoe.brand}}</h3>
+    <p> {{shoe.caption}}</p>
+    <button type="button" class="btn btn-primary viewShoeBtn">View Shoe</button>
+    <button type="button" class="btn btn-primary editShoeBtn">Edit Shoe</button>
+    <button type="button" class="btn btn-danger deleteShoeBtn">Delete Shoe</button>
+  </div>
+
+{{/each}}

@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store')
+const showUserShoesTemplate = require('../templates/user-shoes.handlebars')
 
 const onSignUpSuccess = function () {
   console.log('good job')
@@ -47,9 +48,9 @@ const onLogOutError = function (error) {
 }
 
 const onUserShoesSuccess = function (data) {
-  const shoes = data.user.shoes
-  console.log(shoes)
-  console.log('need to render handle bars')
+  $('#content').empty()
+  const showUserShoesHTML = showUserShoesTemplate({ shoes: data.user.shoes })
+  $('#content').append(showUserShoesHTML)
 }
 
 const onUserShoesError = function (error) {
