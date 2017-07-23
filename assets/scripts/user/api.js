@@ -43,9 +43,17 @@ const logOut = function () {
   })
 }
 
+const userShoes = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/user-shoes/' + data,
+    method: 'GET'
+  })
+}
+
 module.exports = {
   add,
   signIn,
   logOut,
-  changePwd
+  changePwd,
+  userShoes
 }

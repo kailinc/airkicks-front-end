@@ -46,6 +46,14 @@ const onLogOutError = function (error) {
   console.log(error)
 }
 
+const onUserShoesSuccess = function (data) {
+  const shoes = data.user.shoes
+  console.log(shoes)
+}
+
+const onUserShoesError = function (error) {
+  console.log(error)
+}
 // have a function to clear all forms
 module.exports = {
   onSignUpSuccess,
@@ -55,5 +63,7 @@ module.exports = {
   onLogOutSuccess,
   onLogOutError,
   onChangePwdSuccess,
-  onChangePwdError
+  onChangePwdError,
+  onUserShoesSuccess,
+  onUserShoesError
 }

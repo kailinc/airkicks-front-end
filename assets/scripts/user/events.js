@@ -2,6 +2,7 @@
 const userApi = require('./api.js')
 const userUi = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
+const store = require('../store')
 
 const onSignUp = function (e) {
   e.preventDefault()
@@ -35,11 +36,20 @@ const onChangePwd = function (e) {
     .then(userUi.onChangePwdSuccess)
     .catch(userUi.onChangePwdError)
 }
+
+const onUserShoes = function () {
+  const userId = store.user.id
+  userApi.userShoes(userId)
+    .then(userUi.onUserShoesSuccess)
+    .catch(userUi.onUserShoesError)
+}
+
 const addHandlers = () => {
   $('#signUp').on('submit', onSignUp)
   $('#signIn').on('submit', onSignIn)
   $('#logOutBtn').on('click', onLogOut)
   $('#changePwd').on('submit', onChangePwd)
+  $('#userShoesBtn').on('click', onUserShoes)
 }
 
 module.exports = {
