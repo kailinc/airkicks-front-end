@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store')
 const showUserShoesTemplate = require('../templates/user-shoes.handlebars')
+const showUserCollectionsTemplate = require('../templates/user-collections.handlebars')
 
 const onSignUpSuccess = function () {
   console.log('good job')
@@ -58,10 +59,10 @@ const onUserShoesError = function (error) {
 }
 
 const onUserCollectionsSuccess = function (data) {
-  console.log(data)
-  // const shoes = data.user.shoes
-  // console.log(shoes)
-  console.log('need to render handle bars')
+  console.log(data.user)
+  $('#content').empty()
+  const showUserCollectionsHTML = showUserCollectionsTemplate({ collections: data.user.collections })
+  $('#content').append(showUserCollectionsHTML)
 }
 
 const onUserCollectionsError = function (error) {
