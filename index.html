@@ -129,7 +129,7 @@
 
 
 
-<!-- LANDING PAGE FOR INSIDE  -->
+  <!-- LANDING PAGE FOR INSIDE  -->
 
   <div id="innerPage">
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -138,14 +138,14 @@
           <a class="navbar-brand em-text" href="#">Air Kicks</a>
         </div>
         <div id="navbarin" class="navbar-right">
-              <!-- Button trigger modal -->
+          <!-- Button trigger modal -->
           <button oninvalid="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#changePwdModal">
         Change Password
       </button>
           <button type="button" id="logOutBtn" class="btn btn-danger">Log Out</button>
     </nav>
 
-    <div id='inJumbotron'class="jumbotron jumbotron-fluid">
+    <div id='inJumbotron' class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-3">Awww YEAH!</h1>
         <p class="lead">This is where you can showcase your shoe to the World!</p>
@@ -159,7 +159,9 @@
         <div class="col col-sm-2 col-md-4">
           <div class="container">
             <div class="row">
-              <div class="col-xs-12"><hr></div>
+              <div class="col-xs-12">
+                <hr>
+              </div>
               <div class="col col-xs-12">
                 <button id="allShoesBtn" type="button" class="btn btn-success optionBtn">All Shoes</button>
               </div>
@@ -202,20 +204,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-      <!-- HOUSE OF MODALS -->
+    <!-- HOUSE OF MODALS -->
 
 
     <!-- Modal  FOR CHANGING PASSWORDS-->
-    <div class="modal fade" id="changePwdModal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="true" aria-hidden="true">
+    <div class="modal fade" id="changePwdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="true" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -253,25 +246,51 @@
     </div>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="addShoeModal"tabindex="-1" role="dialog" aria-labelledby="AddShoeModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="AddShoeModalLabel">Add Your Shoe</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <!-- Modal CREATE SHOE -->
+    <div class="modal fade" id="addShoeModal" tabindex="-1" role="dialog" aria-labelledby="AddShoeModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="AddShoeModalLabel">Add Your Shoe</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
-          ...
+          </div>
+          <div class="modal-body">
+              <form id="addShoeForm">
+                <div class="form-group row">
+                  <label for="shoeName" class="col-sm-2 col-form-label">Name</label>
+                  <div class="col-sm-10">
+                    <input type="email" name="shoe[name]" class="form-control" placeholder="Name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="shoeBrand" class="col-sm-2 col-form-label">Brand</label>
+                  <div class="col-sm-10">
+                    <input type="password" name="shoe[brand]" class="form-control" placeholder="Brand">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="shoeCaption" class="col-sm-2 col-form-label">Caption</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" name="shoe[caption]" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="offset-sm-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add Shoe</button>
+                  </div>
+                </div>
+              </form>
+
+          </div>
         </div>
       </div>
     </div>
+
+
+
     </div>
-
-
-  </div>
 
 
 </body>
