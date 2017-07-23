@@ -181,7 +181,10 @@
             </div>
             <div class="row">
               <div class="col col-xs-12">
-                <button id="CreateCollectionBtn" type="button" class="btn btn-success optionBtn">Create Collection</button>
+                <button oninvalid="" id="createCollectionBtn" type="button" class="btn btn-success optionBtn" data-toggle="modal" data-target="#createCollectionModal">
+  Create Collection
+</button>
+                <!-- <button id="CreateCollectionBtn" type="button" class="btn btn-success optionBtn">Create Collection</button> -->
               </div>
             </div>
           </div>
@@ -280,6 +283,43 @@
                 <div class="form-group row">
                   <div class="offset-sm-2 col-sm-10">
                     <button type="submit" class="btn btn-primary">Add Shoe</button>
+                  </div>
+                </div>
+              </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal CREATE COLLECTION -->
+    <div class="modal fade" id="createCollectionModal" tabindex="-1" role="dialog" aria-labelledby="AddShoeModalLabel" data-backdrop="true" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create a Collection</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+
+              <form id="createCollectionForm">
+                <div class="form-group row">
+                  <label for="shoeName" class="col-sm-2 col-form-label">Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="collection[name]" class="form-control" placeholder="Name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="shoeCaption" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" name="collection[description]" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="offset-sm-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Create Collection</button>
                   </div>
                 </div>
               </form>
