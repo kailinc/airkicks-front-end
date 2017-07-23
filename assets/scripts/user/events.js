@@ -44,12 +44,20 @@ const onUserShoes = function () {
     .catch(userUi.onUserShoesError)
 }
 
+const onUserCollections = function () {
+  const userId = store.user.id
+  userApi.userCollections(userId)
+    .then(userUi.onUserCollectionsSuccess)
+    .catch(userUi.onUserCollectionsError)
+}
+
 const addHandlers = () => {
   $('#signUp').on('submit', onSignUp)
   $('#signIn').on('submit', onSignIn)
   $('#logOutBtn').on('click', onLogOut)
   $('#changePwd').on('submit', onChangePwd)
   $('#userShoesBtn').on('click', onUserShoes)
+  $('#userCollectionsBtn').on('click', onUserCollections)
 }
 
 module.exports = {

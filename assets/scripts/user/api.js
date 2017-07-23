@@ -50,10 +50,18 @@ const userShoes = function (data) {
   })
 }
 
+const userCollections = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/user-collections/' + data,
+    method: 'GET'
+  })
+}
+
 module.exports = {
   add,
   signIn,
   logOut,
   changePwd,
-  userShoes
+  userShoes,
+  userCollections
 }

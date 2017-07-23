@@ -49,11 +49,24 @@ const onLogOutError = function (error) {
 const onUserShoesSuccess = function (data) {
   const shoes = data.user.shoes
   console.log(shoes)
+  console.log('need to render handle bars')
 }
 
 const onUserShoesError = function (error) {
   console.log(error)
 }
+
+const onUserCollectionsSuccess = function (data) {
+  console.log(data)
+  // const shoes = data.user.shoes
+  // console.log(shoes)
+  console.log('need to render handle bars')
+}
+
+const onUserCollectionsError = function (error) {
+  console.log(error)
+}
+
 // have a function to clear all forms
 module.exports = {
   onSignUpSuccess,
@@ -65,5 +78,7 @@ module.exports = {
   onChangePwdSuccess,
   onChangePwdError,
   onUserShoesSuccess,
-  onUserShoesError
+  onUserShoesError,
+  onUserCollectionsSuccess,
+  onUserCollectionsError
 }
