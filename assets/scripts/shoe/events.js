@@ -6,11 +6,20 @@ const user = require('../user/events.js')
 
 const addShoe = function (e) {
   e.preventDefault()
-  const data = getFormFields(e.target)
-  // console.log(data)
-  shoeApi.add(data)
-    .then(shoeUi.onAddSuccess)
-    .catch(shoeUi.onAddError)
+  if ($('#addShoeBrand').val() === '') {
+    $('#addShoeModal').modal('hide')
+    $('#errorNotify').css('display', 'block').text('There was a problem adding your shoe.')
+    $('#successNotify').css('display', 'none')
+    $('#addShoeName').val('')
+    $('#addShoeBrand').val('')
+    $('#addShoeCap').val('')
+  } else {
+    const data = getFormFields(e.target)
+    // console.log(data)
+    shoeApi.add(data)
+      .then(shoeUi.onAddSuccess)
+      .catch(shoeUi.onAddError)
+  }
 }
 
 const viewShoe = function () {
