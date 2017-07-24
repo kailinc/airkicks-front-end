@@ -58,8 +58,15 @@ const openEditModal = function () {
   $('#editShoeCap').val(shoeCap)
 }
 
+const allShoes = function () {
+  shoeApi.index()
+    .then(shoeUi.onIndexSuccess)
+    .catch(shoeUi.onIndexError)
+}
+
 const addHandlers = () => {
   $('#addShoeForm').on('submit', addShoe)
+  $('#allShoesBtn').on('click', allShoes)
 }
 
 module.exports = {

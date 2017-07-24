@@ -43,9 +43,17 @@ const update = function (data, id) {
   })
 }
 
+const index = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/shoes',
+    method: 'GET'
+  })
+}
+
 module.exports = {
   add,
   destroy,
   show,
-  update
+  update,
+  index
 }

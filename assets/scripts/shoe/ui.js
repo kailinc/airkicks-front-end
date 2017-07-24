@@ -2,6 +2,7 @@
 const shoeStore = require('../store')
 const user = require('../user/events.js')
 const showShoeTemplate = require('../templates/shoe.handlebars')
+const showShoesTemplate = require('../templates/shoes.handlebars')
 
 const onAddSuccess = function (data) {
   $('#addShoeModal').modal('hide')
@@ -64,6 +65,17 @@ const onUpdateError = function (error) {
   $('#editShoeCap').val('')
 }
 
+const onIndexSuccess = function (data) {
+  // console.log(data.shoes)
+  $('#content').empty()
+  const showShoesHTML = showShoesTemplate({ shoes: data.shoes })
+  $('#content').append(showShoesHTML)
+}
+
+const onIndexError = function (error) {
+  console.log(error)
+}
+
 module.exports = {
   onAddSuccess,
   onAddError,
@@ -72,5 +84,7 @@ module.exports = {
   onShowSuccess,
   onShowError,
   onUpdateError,
-  onUpdateSuccess
+  onUpdateSuccess,
+  onIndexSuccess,
+  onIndexError
 }
