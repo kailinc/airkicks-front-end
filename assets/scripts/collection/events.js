@@ -12,10 +12,17 @@ const addCollection = function (e) {
     .catch(collectionUi.onAddError)
 }
 
+const deleteCol = function () {
+  const collectionId = $(this).parent().attr('data-collection-id')
+  collectionApi.destroy(collectionId)
+    .then(collectionUi.onDeleteSuccess)
+    .catch(collectionUi.onDeleteError)
+}
 const addHandlers = () => {
   $('#createCollectionForm').on('submit', addCollection)
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  deleteCol
 }

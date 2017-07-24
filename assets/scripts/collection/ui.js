@@ -11,7 +11,17 @@ const onAddError = function (error) {
   console.log(error)
 }
 
+const onDeleteSuccess = function (data) {
+  $('#content').empty()
+}
+
+const onDeleteError = function (error) {
+  console.log(error)
+}
+
 module.exports = {
   onAddSuccess,
-  onAddError
+  onAddError,
+  onDeleteSuccess,
+  onDeleteError
 }

@@ -3,6 +3,7 @@ const store = require('../store')
 const showUserShoesTemplate = require('../templates/user-shoes.handlebars')
 const showUserCollectionsTemplate = require('../templates/user-collections.handlebars')
 const shoe = require('../shoe/events.js')
+const collection = require('../collection/events.js')
 
 const onSignUpSuccess = function () {
   console.log('good job')
@@ -72,9 +73,7 @@ const onUserCollectionsSuccess = function (data) {
   $('#content').append(showUserCollectionsHTML)
 
   // EVENT LISTNERS FOR COLLECTION ACTIONS
-  // $('.deleteCollectionBtn').on('click', function () {
-  //   alert('hi')
-  // })
+  $('.deleteCollectionBtn').on('click', collection.deleteCol)
 }
 
 const onUserCollectionsError = function (error) {
