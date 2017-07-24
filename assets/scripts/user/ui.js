@@ -86,12 +86,11 @@ const onUserShoesError = function (error) {
 }
 
 const onUserCollectionsSuccess = function (data) {
-  console.log(data.user)
   $('#content').empty()
   const showUserCollectionsHTML = showUserCollectionsTemplate({ collections: data.user.collections })
   $('#content').append(showUserCollectionsHTML)
 
-  // EVENT LISTNERS FOR COLLECTION ACTIONS
+    // EVENT LISTNERS FOR COLLECTION ACTIONS
   $('.deleteCollectionBtn').on('click', collection.deleteCol)
   $('.viewCollectionBtn').on('click', collection.showCol)
   $('.editCollectionBtn').on('click', collection.openEditColModal)
