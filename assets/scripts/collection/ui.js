@@ -4,20 +4,29 @@ const showCollectionTemplate = require('../templates/collection.handlebars')
 
 const onAddSuccess = function (data) {
   $('#createCollectionModal').modal('hide')
-  console.log(data)
-  // console.log('clear forms')
-  // console.log('collection is added')
+  $('#successNotify').css('display', 'block').text('Your collection is created.')
+  $('#errorNotify').css('display', 'none')
+  $('#addColDes').val('')
+  $('#addColName').val('')
 }
 const onAddError = function (error) {
   console.log(error)
+  $('#errorNotify').css('display', 'block').text('There was a problem creating your collection.')
+  $('#successNotify').css('display', 'none')
+  $('#addColDes').val('')
+  $('#addColName').val('')
 }
 
 const onDeleteSuccess = function (data) {
   $('#content').empty()
+  $('#successNotify').css('display', 'block').text('The collection has been deleted.')
+  $('#errorNotify').css('display', 'none')
 }
 
 const onDeleteError = function (error) {
   console.log(error)
+  $('#errorNotify').css('display', 'block').text('There was a problem deleting the collection.')
+  $('#successNotify').css('display', 'none')
 }
 
 const onShowSuccess = function (data) {
