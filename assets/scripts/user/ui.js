@@ -16,15 +16,24 @@ const onSignUpSuccess = function () {
 const onSignUpError = function () {
   $('#signUpError').css('display', 'block')
   $('#signUpSuccess').css('display', 'none')
+  $('#signUpEmail').val('')
+  $('#signUpPassword').val('')
+  $('#confirmPassword').val('')
 }
 
 const onSignInSuccess = function (data) {
   $('#landingPage').css('display', 'none')
   $('#innerPage').css('display', 'block')
   store.user = data.user
+  $('#errorNotify').css('display', 'none')
+  $('#loginEmail').val('')
+  $('#loginPassword').val('')
 }
+
 const onSignInError = function (error) {
-  console.log('Either the password is wrong or the account does not exist')
+  $('#loginEmail').val('')
+  $('#loginPassword').val('')
+  $('#errorNotify').css('display', 'block').text("Either the password/username doesn't match or the account is taken.")
   console.log(error)
 }
 
