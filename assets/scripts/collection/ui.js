@@ -43,10 +43,20 @@ const onShowError = function (error) {
 const onUpdateSuccess = function (data) {
   $('#content').empty()
   $('#editColModal').modal('hide')
+  $('#successNotify').css('display', 'block').text('Your collection has been updated.')
+  $('#errorNotify').css('display', 'none')
+  $('#editColDes').val('')
+  $('#editColName').val('')
 }
 
 const onUpdateError = function (error) {
   console.log(error)
+  $('#content').empty()
+  $('#editColModal').modal('hide')
+  $('#errorNotify').css('display', 'block').text('There was a problem with updating your collection.')
+  $('#successNotify').css('display', 'none')
+  $('#editColDes').val('')
+  $('#editColName').val('')
 }
 
 module.exports = {

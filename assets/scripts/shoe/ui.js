@@ -41,13 +41,23 @@ const onShowError = function (error) {
 }
 
 const onUpdateSuccess = function (data) {
-  console.log('ok')
   $('#content').empty()
   $('#editShoeModal').modal('hide')
+  $('#successNotify').css('display', 'block').text('Your shoe has been updated.')
+  $('#errorNotify').css('display', 'none')
+  $('#editShoeName').val('')
+  $('#editShoeName').val('')
+  $('#editShoeCap').val('')
 }
 
 const onUpdateError = function (error) {
   console.log(error)
+  $('#editShoeModal').modal('hide')
+  $('#errorNotify').css('display', 'block').text('There was a problem updating your shoe.')
+  $('#successNotify').css('display', 'none')
+  $('#editShoeName').val('')
+  $('#editShoeName').val('')
+  $('#editShoeCap').val('')
 }
 
 module.exports = {
