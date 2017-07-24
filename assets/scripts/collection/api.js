@@ -26,7 +26,15 @@ const destroy = function (data) {
   })
 }
 
+const show = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/collections/' + data,
+    method: 'GET'
+  })
+}
+
 module.exports = {
   add,
-  destroy
+  destroy,
+  show
 }
