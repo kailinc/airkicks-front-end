@@ -11,6 +11,7 @@ const onAddSuccess = function (data) {
 }
 const onAddError = function (error) {
   console.log(error)
+  $('#createCollectionModal').modal('hide')
   $('#errorNotify').css('display', 'block').text('There was a problem creating your collection.')
   $('#successNotify').css('display', 'none')
   $('#addColDes').val('')

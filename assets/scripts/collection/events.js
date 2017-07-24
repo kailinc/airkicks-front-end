@@ -28,8 +28,12 @@ const showCol = function () {
 
 const openEditColModal = function () {
   const collectionId = $(this).parent().attr('data-collection-id')
+  const colName = $(this).parent().attr('data-collection-name')
+  const colDes = $(this).parent().attr('data-collection-description')
   $('#editColModal').modal('show')
   $('#editColId').text(collectionId)
+  $('#editColName').val(colName)
+  $('#editColDes').val(colDes)
 }
 
 const editCol = function (event) {
