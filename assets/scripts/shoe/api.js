@@ -15,6 +15,17 @@ const add = function (data) {
   })
 }
 
+const destroy = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/shoes/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  add
+  add,
+  destroy
 }

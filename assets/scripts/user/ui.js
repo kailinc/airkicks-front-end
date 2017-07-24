@@ -2,6 +2,7 @@
 const store = require('../store')
 const showUserShoesTemplate = require('../templates/user-shoes.handlebars')
 const showUserCollectionsTemplate = require('../templates/user-collections.handlebars')
+const shoe = require('../shoe/events.js')
 
 const onSignUpSuccess = function () {
   console.log('good job')
@@ -52,6 +53,8 @@ const onUserShoesSuccess = function (data) {
   $('#content').empty()
   const showUserShoesHTML = showUserShoesTemplate({ shoes: data.user.shoes })
   $('#content').append(showUserShoesHTML)
+
+  shoe.addHandlers()
 }
 
 const onUserShoesError = function (error) {
@@ -63,6 +66,11 @@ const onUserCollectionsSuccess = function (data) {
   $('#content').empty()
   const showUserCollectionsHTML = showUserCollectionsTemplate({ collections: data.user.collections })
   $('#content').append(showUserCollectionsHTML)
+
+  // EVENT LISTNERS FOR COLLECTION ACTIONS
+  // $('.deleteCollectionBtn').on('click', function () {
+  //   alert('hi')
+  // })
 }
 
 const onUserCollectionsError = function (error) {
