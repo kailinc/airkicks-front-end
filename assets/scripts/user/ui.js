@@ -6,14 +6,16 @@ const shoe = require('../shoe/events.js')
 const collection = require('../collection/events.js')
 
 const onSignUpSuccess = function () {
-  console.log('good job')
-  console.log('sign it in or go to the top of the page')
+  $('#signUpEmail').val('')
+  $('#signUpPassword').val('')
+  $('#confirmPassword').val('')
+  $('#signUpSuccess').css('display', 'block')
+  $('#signUpError').css('display', 'none')
 }
 
-const onSignUpError = function (error) {
-  alert('try again buddy')
-  console.log('either the pass words don\'t match or it is taken')
-  console.log(error)
+const onSignUpError = function () {
+  $('#signUpError').css('display', 'block')
+  $('#signUpSuccess').css('display', 'none')
 }
 
 const onSignInSuccess = function (data) {
