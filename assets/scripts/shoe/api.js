@@ -15,6 +15,13 @@ const add = function (data) {
   })
 }
 
+const show = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/shoes/' + data,
+    method: 'GET'
+  })
+}
+
 const destroy = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/shoes/' + data,
@@ -27,5 +34,6 @@ const destroy = function (data) {
 
 module.exports = {
   add,
-  destroy
+  destroy,
+  show
 }

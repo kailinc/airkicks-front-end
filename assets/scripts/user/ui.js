@@ -54,7 +54,9 @@ const onUserShoesSuccess = function (data) {
   const showUserShoesHTML = showUserShoesTemplate({ shoes: data.user.shoes })
   $('#content').append(showUserShoesHTML)
 
-  shoe.addHandlers()
+  // event handlers
+  $('.deleteShoeBtn').on('click', shoe.deleteShoe)
+  $('.viewShoeBtn').on('click', shoe.viewShoe)
 }
 
 const onUserShoesError = function (error) {

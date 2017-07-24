@@ -1,6 +1,7 @@
 'use strict'
 const shoeStore = require('../store')
 const user = require('../user/events.js')
+const showShoeTemplate = require('../templates/shoe.handlebars')
 
 const onAddSuccess = function (data) {
   $('#addShoeModal').modal('hide')
@@ -13,16 +14,29 @@ const onAddError = function (error) {
 }
 
 const onDestroySuccess = function (data) {
-  console.log('shoe is deleted')
+  $('#content').empty()
+  console.log(data)
 }
 
 const onDestroyError = function (error) {
   console.log(error)
 }
 
+const onShowSuccess = function (data) {
+  console.log(data)
+  $('#content').empty()
+  const showShoeHTML = showShoeTemplate(data)
+  $('#content').append(showShoeHTML)
+}
+
+const onShowError = function (error) {
+  console.log(error)
+}
 module.exports = {
   onAddSuccess,
   onAddError,
   onDestroySuccess,
-  onDestroyError
+  onDestroyError,
+  onShowSuccess,
+  onShowError
 }
