@@ -33,7 +33,7 @@ const editShoe = function (event) {
   const data = getFormFields(event.target)
   shoeApi.update(data, shoeId)
     .then(shoeUi.onUpdateSuccess)
-    .then(shoeUi.onUpdateError)
+    .catch(shoeUi.onUpdateError)
 }
 
 const openEditModal = function () {

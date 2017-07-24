@@ -364,6 +364,43 @@
                   <button type="submit" class="btn btn-primary">Update Shoe</button>
                 </div>
               </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDIT COLLECTION MODAL -->
+    <div id="editColModal" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Collection</h5><h5 id="editColId"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div class="modal-body">
+            <form id="editColForm">
+              <div class="form-group row">
+                <label for="shoeName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" name="collection[name]" class="form-control" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="shoeCaption" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                <input type="text" name="collection[description]" class="form-control" placeholder="Description">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary">Update Collection</button>
+                </div>
+              </div>
+            </form>
 
           </div>
         </div>

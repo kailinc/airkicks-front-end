@@ -26,6 +26,21 @@ const showCol = function () {
     .catch(collectionUi.onShowError)
 }
 
+const openEditColModal = function () {
+  const collectionId = $(this).parent().attr('data-collection-id')
+  $('#editColModal').modal('show')
+  $('#editColId').text(collectionId)
+}
+
+const editCol = function (event) {
+  event.preventDefault()
+  const collectionId = $('#editColId').text()
+  const data = getFormFields(event.target)
+  collectionApi.update(data, collectionId)
+    .then(collectionUi.onUpdateSuccess)
+    .catch(collectionUi.onUpdateError)
+}
+
 const addHandlers = () => {
   $('#createCollectionForm').on('submit', addCollection)
 }
@@ -33,5 +48,7 @@ const addHandlers = () => {
 module.exports = {
   addHandlers,
   deleteCol,
-  showCol
+  showCol,
+  openEditColModal,
+  editCol
 }

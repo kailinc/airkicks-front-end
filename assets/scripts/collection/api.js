@@ -33,8 +33,19 @@ const show = function (data) {
   })
 }
 
+const update = function (data, id) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiOrigin + '/collections/' + id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 module.exports = {
   add,
   destroy,
-  show
+  show,
+  update
 }

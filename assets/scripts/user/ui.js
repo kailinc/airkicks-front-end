@@ -75,6 +75,8 @@ const onUserCollectionsSuccess = function (data) {
   // EVENT LISTNERS FOR COLLECTION ACTIONS
   $('.deleteCollectionBtn').on('click', collection.deleteCol)
   $('.viewCollectionBtn').on('click', collection.showCol)
+  $('.editCollectionBtn').on('click', collection.openEditColModal)
+  $('#editColForm').on('submit', collection.editCol)
 }
 
 const onUserCollectionsError = function (error) {

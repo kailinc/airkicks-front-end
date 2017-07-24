@@ -31,11 +31,22 @@ const onShowError = function (error) {
   console.log('try again buddy')
 }
 
+const onUpdateSuccess = function (data) {
+  $('#content').empty()
+  $('#editColModal').modal('hide')
+}
+
+const onUpdateError = function (error) {
+  console.log(error)
+}
+
 module.exports = {
   onAddSuccess,
   onAddError,
   onDeleteSuccess,
   onDeleteError,
   onShowSuccess,
-  onShowError
+  onShowError,
+  onUpdateSuccess,
+  onUpdateError
 }
