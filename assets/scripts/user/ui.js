@@ -28,6 +28,7 @@ const onSignInSuccess = function (data) {
   $('#errorNotify').css('display', 'none')
   $('#loginEmail').val('')
   $('#loginPassword').val('')
+  $('#content').empty()
 }
 
 const onSignInError = function (error) {
@@ -58,7 +59,10 @@ const onLogOutSuccess = function () {
   store.user = null
   $('#landingPage').css('display', 'block')
   $('#innerPage').css('display', 'none')
-  console.log('clear all forms')
+  $('#errorNotify').css('display', 'none')
+  $('#successNotify').css('display', 'none')
+  $('#signUpSuccess').css('display', 'none')
+  $('#signUpError').css('display', 'none')
 }
 
 const onLogOutError = function (error) {
