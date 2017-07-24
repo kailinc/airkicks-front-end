@@ -23,7 +23,6 @@ const onDestroyError = function (error) {
 }
 
 const onShowSuccess = function (data) {
-  console.log(data)
   $('#content').empty()
   const showShoeHTML = showShoeTemplate(data)
   $('#content').append(showShoeHTML)
@@ -32,11 +31,24 @@ const onShowSuccess = function (data) {
 const onShowError = function (error) {
   console.log(error)
 }
+
+const onUpdateSuccess = function (data) {
+  console.log('ok')
+  $('#content').empty()
+  $('#editShoeModal').modal('hide')
+}
+
+const onUpdateError = function (error) {
+  console.log(error)
+}
+
 module.exports = {
   onAddSuccess,
   onAddError,
   onDestroySuccess,
   onDestroyError,
   onShowSuccess,
-  onShowError
+  onShowError,
+  onUpdateError,
+  onUpdateSuccess
 }

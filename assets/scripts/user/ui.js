@@ -57,6 +57,8 @@ const onUserShoesSuccess = function (data) {
   // event handlers
   $('.deleteShoeBtn').on('click', shoe.deleteShoe)
   $('.viewShoeBtn').on('click', shoe.viewShoe)
+  $('.editShoeBtn').on('click', shoe.openEditModal)
+  $('#editShoeForm').on('submit', shoe.editShoe)
 }
 
 const onUserShoesError = function (error) {

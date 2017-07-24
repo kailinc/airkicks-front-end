@@ -27,6 +27,21 @@ const deleteShoe = function () {
     .catch(shoeUi.onDestroyError)
 }
 
+const editShoe = function (event) {
+  event.preventDefault()
+  const shoeId = $('#editShoeId').text()
+  const data = getFormFields(event.target)
+  shoeApi.update(data, shoeId)
+    .then(shoeUi.onUpdateSuccess)
+    .then(shoeUi.onUpdateError)
+}
+
+const openEditModal = function () {
+  const shoeId = $(this).parent().attr('data-shoe-id')
+  $('#editShoeModal').modal('show')
+  $('#editShoeId').text(shoeId)
+}
+
 const addHandlers = () => {
   $('#addShoeForm').on('submit', addShoe)
 }
@@ -35,5 +50,7 @@ module.exports = {
   addHandlers,
   addShoe,
   deleteShoe,
-  viewShoe
+  viewShoe,
+  openEditModal,
+  editShoe
 }

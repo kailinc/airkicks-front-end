@@ -32,8 +32,20 @@ const destroy = function (data) {
   })
 }
 
+const update = function (data, id) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiOrigin + '/shoes/' + id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   add,
   destroy,
-  show
+  show,
+  update
 }
