@@ -45,8 +45,15 @@ const editCol = function (event) {
     .catch(collectionUi.onUpdateError)
 }
 
+const allCol = function () {
+  collectionApi.index()
+    .then(collectionUi.onIndexSuccess)
+    .catch(collectionUi.onIndexError)
+}
+
 const addHandlers = () => {
   $('#createCollectionForm').on('submit', addCollection)
+  $('#allColBtn').on('click', allCol)
 }
 
 module.exports = {

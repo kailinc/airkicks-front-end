@@ -1,6 +1,7 @@
 'use strict'
 const collectionStore = require('../store')
 const showCollectionTemplate = require('../templates/collection.handlebars')
+const showColsTemplate = require('../templates/collections.handlebars')
 
 const onAddSuccess = function (data) {
   $('#createCollectionModal').modal('hide')
@@ -60,6 +61,16 @@ const onUpdateError = function (error) {
   $('#editColName').val('')
 }
 
+const onIndexSuccess = function (data) {
+  $('#content').empty()
+  const showColsHTML = showColsTemplate({ collections: data.collections })
+  $('#content').append(showColsHTML)
+}
+
+const onIndexError = function (error) {
+  console.log(error)
+}
+
 module.exports = {
   onAddSuccess,
   onAddError,
@@ -68,5 +79,7 @@ module.exports = {
   onShowSuccess,
   onShowError,
   onUpdateSuccess,
-  onUpdateError
+  onUpdateError,
+  onIndexSuccess,
+  onIndexError
 }
