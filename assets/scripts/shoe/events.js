@@ -47,8 +47,15 @@ const editShoe = function (event) {
 
 const openEditModal = function () {
   const shoeId = $(this).parent().attr('data-shoe-id')
+  const shoeName = $(this).parent().attr('data-shoe-name')
+  const shoeBrand = $(this).parent().attr('data-shoe-brand')
+  const shoeCap = $(this).parent().attr('data-shoe-cap')
+  console.log(shoeCap, shoeBrand)
   $('#editShoeModal').modal('show')
   $('#editShoeId').text(shoeId)
+  $('#editShoeName').val(shoeName)
+  $('#editShoeBrand').val(shoeBrand)
+  $('#editShoeCap').val(shoeCap)
 }
 
 const addHandlers = () => {
