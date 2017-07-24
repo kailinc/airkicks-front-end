@@ -23,10 +23,14 @@ const onAddError = function (error) {
 
 const onDestroySuccess = function (data) {
   $('#content').empty()
+  $('#successNotify').css('display', 'block').text('Your shoe has been deleted.')
+  $('#errorNotify').css('display', 'none')
   console.log(data)
 }
 
 const onDestroyError = function (error) {
+  $('#errorNotify').css('display', 'block').text('There was a problem deleting your shoe.')
+  $('#successNotify').css('display', 'none')
   console.log(error)
 }
 
