@@ -39,14 +39,18 @@ const onSignInError = function (error) {
 
 const onChangePwdSuccess = function () {
   $('#changePwdModal').modal('hide')
-  console.log('you have changed your password')
-  console.log('clear forms')
+  $('#successNotify').css('display', 'block').text('You have changed your password')
+  $('#errorNotify').css('display', 'none')
+  $('#changePwdOld').val('')
+  $('#changePwdNew').val('')
 }
 const onChangePwdError = function (error) {
   console.log(error)
-  alert('try again buddy')
-  console.log('clear forms')
-  console.log('password not correct')
+  $('#changePwdModal').modal('hide')
+  $('#changePwdOld').val('')
+  $('#changePwdNew').val('')
+  $('#errorNotify').css('display', 'block').text('The password you gave was wrong')
+  $('#successNotify').css('display', 'none')
 }
 
 const onLogOutSuccess = function () {
