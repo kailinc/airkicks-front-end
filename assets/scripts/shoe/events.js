@@ -8,6 +8,7 @@ const addShoe = function (e) {
   e.preventDefault()
   if ($('#addShoeBrand').val() === '') {
     $('#addShoeModal').modal('hide')
+    $('#content').empty()
     $('#errorNotify').css('display', 'block').text('There was a problem adding your shoe.')
     $('#successNotify').css('display', 'none')
     $('#addShoeName').val('')

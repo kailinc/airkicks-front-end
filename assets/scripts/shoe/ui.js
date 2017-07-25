@@ -6,6 +6,7 @@ const showShoesTemplate = require('../templates/shoes.handlebars')
 
 const onAddSuccess = function (data) {
   $('#addShoeModal').modal('hide')
+  $('#content').empty()
   $('#successNotify').css('display', 'block').text('Your shoe has been added.')
   $('#errorNotify').css('display', 'none')
   $('#addShoeName').val('')
@@ -14,6 +15,7 @@ const onAddSuccess = function (data) {
 }
 const onAddError = function (error) {
   $('#addShoeModal').modal('hide')
+  $('#content').empty()
   $('#errorNotify').css('display', 'block').text('There was a problem adding your shoe.')
   $('#successNotify').css('display', 'none')
   $('#addShoeName').val('')
