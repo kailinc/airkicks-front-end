@@ -15,6 +15,9 @@ https://kailinc.github.io/airkicks-front-end/
 
 ![Wire Frame Part 1](https://raw.githubusercontent.com/kailinc/airkicks-front-end/basic/docAssets/wireframes/wireframe1.jpg)
 
+![Wire Frame Part 2](airkicks-front-end/docAssets/wireframes/wireframe2.jpg)
+
+
 ## User Stories
 
 ## development process
