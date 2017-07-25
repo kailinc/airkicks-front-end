@@ -47,7 +47,6 @@ const editShoe = function (event) {
     $('#editShoeName').val('')
     $('#editShoeBrand').val('')
     $('#editShoeCap').val('')
-    console.log('here it is')
   } else {
     const shoeId = $('#editShoeId').text()
     const data = getFormFields(event.target)
@@ -62,7 +61,6 @@ const openEditModal = function () {
   const shoeName = $(this).parent().attr('data-shoe-name')
   const shoeBrand = $(this).parent().attr('data-shoe-brand')
   const shoeCap = $(this).parent().attr('data-shoe-cap')
-  console.log(shoeCap, shoeBrand)
   $('#editShoeModal').modal('show')
   $('#editShoeId').text(shoeId)
   $('#editShoeName').val(shoeName)
