@@ -21,6 +21,7 @@ a guide line to design the layout and create a user friendly website.
 
 ![Wire Frame Part 2](https://raw.githubusercontent.com/kailinc/airkicks-front-end/basic/docAssets/wireframes/wireframe2.jpg)
 
+![Wire Frame Part 3](https://raw.githubusercontent.com/kailinc/airkicks-front-end/basic/docAssets/devProcess/devProcess5.jpg)
 
 ## User Stories
 
@@ -43,12 +44,21 @@ the whiteboard would serve as a blue print/check list for me.
 
 Below are pictures of how I whiteboarded features on the website.
 
+![Round 1 White Board](https://raw.githubusercontent.com/kailinc/airkicks-front-end/basic/docAssets/devProcess/devProcess1.jpg)
+
+![Round 2,3 White Board](https://raw.githubusercontent.com/kailinc/airkicks-front-end/basic/docAssets/devProcess/devProcess3.jpg)
+
+![Round 2,3 White Board](https://raw.githubusercontent.com/kailinc/airkicks-front-end/basic/docAssets/devProcess/devProcess4.jpg)
+
+
 At the start of each day or coding session, I would have a plan of action for me
 to tackle. This made me focused and know what to do. After completing the tasks
 on the plan of action, I would make a new plan of action for me to tackle on my
 next coding session.
 
-Below are pictures of my plan of actions.
+Below is a picture of my plan of actions.
+
+![Plan of Action](https://raw.githubusercontent.com/kailinc/airkicks-front-end/basic/docAssets/devProcess/devProcess2.jpg)
 
 
 
