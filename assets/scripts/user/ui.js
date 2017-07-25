@@ -71,14 +71,19 @@ const onLogOutError = function (error) {
 
 const onUserShoesSuccess = function (data) {
   $('#content').empty()
-  const showUserShoesHTML = showUserShoesTemplate({ shoes: data.user.shoes })
-  $('#content').append(showUserShoesHTML)
 
-  // event handlers
-  $('.deleteShoeBtn').on('click', shoe.deleteShoe)
-  $('.viewShoeBtn').on('click', shoe.viewShoe)
-  $('.editShoeBtn').on('click', shoe.openEditModal)
-  $('#editShoeForm').on('submit', shoe.editShoe)
+  if (data.user.shoes.length === 0) {
+    $('#errorNotify').css('display', 'block').text('You don\'t have any shoes.')
+    $('#successNotify').css('display', 'none')
+  } else {
+    const showUserShoesHTML = showUserShoesTemplate({ shoes: data.user.shoes })
+    $('#content').append(showUserShoesHTML)
+    // event handlers
+    $('.deleteShoeBtn').on('click', shoe.deleteShoe)
+    $('.viewShoeBtn').on('click', shoe.viewShoe)
+    $('.editShoeBtn').on('click', shoe.openEditModal)
+    $('#editShoeForm').on('submit', shoe.editShoe)
+  }
 }
 
 const onUserShoesError = function (error) {
