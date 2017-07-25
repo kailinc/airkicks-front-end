@@ -5,6 +5,7 @@ const showColsTemplate = require('../templates/collections.handlebars')
 
 const onAddSuccess = function (data) {
   $('#createCollectionModal').modal('hide')
+  $('#content').empty()
   $('#successNotify').css('display', 'block').text('Your collection is created.')
   $('#errorNotify').css('display', 'none')
   $('#addColDes').val('')
@@ -13,6 +14,7 @@ const onAddSuccess = function (data) {
 const onAddError = function (error) {
   console.log(error)
   $('#createCollectionModal').modal('hide')
+  $('#content').empty()
   $('#errorNotify').css('display', 'block').text('There was a problem creating your collection.')
   $('#successNotify').css('display', 'none')
   $('#addColDes').val('')
