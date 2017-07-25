@@ -13,7 +13,7 @@ https://kailinc.github.io/airkicks-front-end/
 
 ## Wireframes
 
-![Wire Frame Part 1](docAssets/wireframes/wireframes1.jpg)
+![Wire Frame Part 1](https://raw.githubusercontent.com/kailinc/airkicks-front-end/basic/docAssets/wireframes/wireframe1.jpg)
 
 ## User Stories
 
