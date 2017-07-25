@@ -53,17 +53,18 @@ const onUpdateSuccess = function (data) {
   $('#successNotify').css('display', 'block').text('Your shoe has been updated.')
   $('#errorNotify').css('display', 'none')
   $('#editShoeName').val('')
-  $('#editShoeName').val('')
+  $('#editShoeBrand').val('')
   $('#editShoeCap').val('')
 }
 
 const onUpdateError = function (error) {
   console.log(error)
   $('#editShoeModal').modal('hide')
+  $('#content').empty()
   $('#errorNotify').css('display', 'block').text('There was a problem updating your shoe.')
   $('#successNotify').css('display', 'none')
   $('#editShoeName').val('')
-  $('#editShoeName').val('')
+  $('#editShoeBrand').val('')
   $('#editShoeCap').val('')
 }
 

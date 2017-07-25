@@ -39,11 +39,22 @@ const deleteShoe = function () {
 
 const editShoe = function (event) {
   event.preventDefault()
-  const shoeId = $('#editShoeId').text()
-  const data = getFormFields(event.target)
-  shoeApi.update(data, shoeId)
-    .then(shoeUi.onUpdateSuccess)
-    .catch(shoeUi.onUpdateError)
+  if ($('#editShoeBrand').val() === '') {
+    $('#editShoeModal').modal('hide')
+    $('#content').empty()
+    $('#errorNotify').css('display', 'block').text('There was a problem updating your shoe.')
+    $('#successNotify').css('display', 'none')
+    $('#editShoeName').val('')
+    $('#editShoeBrand').val('')
+    $('#editShoeCap').val('')
+    console.log('here it is')
+  } else {
+    const shoeId = $('#editShoeId').text()
+    const data = getFormFields(event.target)
+    shoeApi.update(data, shoeId)
+      .then(shoeUi.onUpdateSuccess)
+      .catch(shoeUi.onUpdateError)
+  }
 }
 
 const openEditModal = function () {
