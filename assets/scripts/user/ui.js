@@ -92,14 +92,19 @@ const onUserShoesError = function (error) {
 
 const onUserCollectionsSuccess = function (data) {
   $('#content').empty()
-  const showUserCollectionsHTML = showUserCollectionsTemplate({ collections: data.user.collections })
-  $('#content').append(showUserCollectionsHTML)
+  if (data.user.collections.length === 0) {
+    $('#errorNotify').css('display', 'block').text('You don\'t have any collections.')
+    $('#successNotify').css('display', 'none')
+  } else {
+    const showUserCollectionsHTML = showUserCollectionsTemplate({ collections: data.user.collections })
+    $('#content').append(showUserCollectionsHTML)
 
-    // EVENT LISTNERS FOR COLLECTION ACTIONS
-  $('.deleteCollectionBtn').on('click', collection.deleteCol)
-  $('.viewCollectionBtn').on('click', collection.showCol)
-  $('.editCollectionBtn').on('click', collection.openEditColModal)
-  $('#editColForm').on('submit', collection.editCol)
+      // EVENT LISTNERS FOR COLLECTION ACTIONS
+    $('.deleteCollectionBtn').on('click', collection.deleteCol)
+    $('.viewCollectionBtn').on('click', collection.showCol)
+    $('.editCollectionBtn').on('click', collection.openEditColModal)
+    $('#editColForm').on('submit', collection.editCol)
+  }
 }
 
 const onUserCollectionsError = function (error) {
