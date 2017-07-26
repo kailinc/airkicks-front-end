@@ -21,20 +21,19 @@ const onAddError = function (error) {
   $('#addShoeName').val('')
   $('#addShoeBrand').val('')
   $('#addShoeCap').val('')
-  console.log(error)
+  // console.log(error)
 }
 
 const onDestroySuccess = function (data) {
   $('#content').empty()
   $('#successNotify').css('display', 'block').text('Your shoe has been deleted.')
   $('#errorNotify').css('display', 'none')
-  console.log(data)
 }
 
 const onDestroyError = function (error) {
   $('#errorNotify').css('display', 'block').text('There was a problem deleting your shoe.')
   $('#successNotify').css('display', 'none')
-  console.log(error)
+  // console.log(error)
 }
 
 const onShowSuccess = function (data) {
@@ -44,7 +43,7 @@ const onShowSuccess = function (data) {
 }
 
 const onShowError = function (error) {
-  console.log(error)
+  // console.log(error)
 }
 
 const onUpdateSuccess = function (data) {
@@ -58,7 +57,7 @@ const onUpdateSuccess = function (data) {
 }
 
 const onUpdateError = function (error) {
-  console.log(error)
+  // console.log(error)
   $('#editShoeModal').modal('hide')
   $('#content').empty()
   $('#errorNotify').css('display', 'block').text('There was a problem updating your shoe.')
@@ -76,7 +75,7 @@ const onIndexSuccess = function (data) {
 }
 
 const onIndexError = function (error) {
-  console.log(error)
+  // console.log(error)
 }
 
 module.exports = {

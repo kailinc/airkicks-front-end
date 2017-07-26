@@ -46,6 +46,8 @@ const editCol = function (event) {
 }
 
 const allCol = function () {
+  $('#successNotify').css('display', 'none')
+  $('#errorNotify').css('display', 'none')
   collectionApi.index()
     .then(collectionUi.onIndexSuccess)
     .catch(collectionUi.onIndexError)

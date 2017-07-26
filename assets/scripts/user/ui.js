@@ -35,7 +35,7 @@ const onSignInError = function (error) {
   $('#loginEmail').val('')
   $('#loginPassword').val('')
   $('#errorNotify').css('display', 'block').text("Either the password/username doesn't match or the account is taken.")
-  console.log(error)
+  // console.log(error)
 }
 
 const onChangePwdSuccess = function () {
@@ -46,7 +46,7 @@ const onChangePwdSuccess = function () {
   $('#changePwdNew').val('')
 }
 const onChangePwdError = function (error) {
-  console.log(error)
+  // console.log(error)
   $('#changePwdModal').modal('hide')
   $('#changePwdOld').val('')
   $('#changePwdNew').val('')
@@ -66,7 +66,7 @@ const onLogOutSuccess = function () {
 }
 
 const onLogOutError = function (error) {
-  console.log(error)
+  // console.log(error)
 }
 
 const onUserShoesSuccess = function (data) {
@@ -87,7 +87,7 @@ const onUserShoesSuccess = function (data) {
 }
 
 const onUserShoesError = function (error) {
-  console.log(error)
+  // console.log(error)
 }
 
 const onUserCollectionsSuccess = function (data) {
@@ -108,7 +108,7 @@ const onUserCollectionsSuccess = function (data) {
 }
 
 const onUserCollectionsError = function (error) {
-  console.log(error)
+  // console.log(error)
 }
 
 // have a function to clear all forms

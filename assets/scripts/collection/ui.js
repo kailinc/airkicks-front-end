@@ -12,7 +12,7 @@ const onAddSuccess = function (data) {
   $('#addColName').val('')
 }
 const onAddError = function (error) {
-  console.log(error)
+  // console.log(error)
   $('#createCollectionModal').modal('hide')
   $('#content').empty()
   $('#errorNotify').css('display', 'block').text('There was a problem creating your collection.')
@@ -28,7 +28,7 @@ const onDeleteSuccess = function (data) {
 }
 
 const onDeleteError = function (error) {
-  console.log(error)
+  // console.log(error)
   $('#errorNotify').css('display', 'block').text('There was a problem deleting the collection.')
   $('#successNotify').css('display', 'none')
 }
@@ -40,8 +40,7 @@ const onShowSuccess = function (data) {
 }
 
 const onShowError = function (error) {
-  console.log(error)
-  console.log('try again buddy')
+  // console.log(error)
 }
 
 const onUpdateSuccess = function (data) {
@@ -54,7 +53,7 @@ const onUpdateSuccess = function (data) {
 }
 
 const onUpdateError = function (error) {
-  console.log(error)
+  // console.log(error)
   $('#content').empty()
   $('#editColModal').modal('hide')
   $('#errorNotify').css('display', 'block').text('There was a problem with updating your collection.')
@@ -70,7 +69,7 @@ const onIndexSuccess = function (data) {
 }
 
 const onIndexError = function (error) {
-  console.log(error)
+  // console.log(error)
 }
 
 module.exports = {

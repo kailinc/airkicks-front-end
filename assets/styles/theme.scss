@@ -87,10 +87,16 @@ button {
 
 #successNotify {
   display: none;
+  position: fixed;
+  top: 100;
+  left: 0;
 }
 
 #errorNotify {
   display: none;
+  position: fixed;
+  top: 100;
+  left: 0;
 }
 
 #signUpError {
