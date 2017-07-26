@@ -69,6 +69,8 @@ const openEditModal = function () {
 }
 
 const allShoes = function () {
+  $('#successNotify').css('display', 'none')
+  $('#errorNotify').css('display', 'none')
   shoeApi.index()
     .then(shoeUi.onIndexSuccess)
     .catch(shoeUi.onIndexError)

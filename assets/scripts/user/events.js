@@ -38,6 +38,8 @@ const onChangePwd = function (e) {
 }
 
 const onUserShoes = function () {
+  $('#successNotify').css('display', 'none')
+  $('#errorNotify').css('display', 'none')
   const userId = store.user.id
   userApi.userShoes(userId)
     .then(userUi.onUserShoesSuccess)
@@ -45,6 +47,8 @@ const onUserShoes = function () {
 }
 
 const onUserCollections = function () {
+  $('#successNotify').css('display', 'none')
+  $('#errorNotify').css('display', 'none')
   const userId = store.user.id
   userApi.userCollections(userId)
     .then(userUi.onUserCollectionsSuccess)
