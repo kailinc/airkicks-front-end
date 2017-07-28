@@ -15,6 +15,10 @@
 
 https://kailinc.github.io/airkicks-front-end/
 
+## URL of API
+
+https://github.com/kailinc/airkicks-api
+
 ## Technologies Used
 
 -   Ruby on Rails
