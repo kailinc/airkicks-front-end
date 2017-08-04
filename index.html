@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Air Kicks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <div class="alert alert-success" role="alert" id="successNotify">
+    You successfully read this important alert message.
+  </div>
+
+  <div class="alert alert-danger" role="alert" id="errorNotify">
+    This alert needs your attention, but it's not super important.
+  </div>
+
+  <div id="landingPage">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          <a class="navbar-brand em-text" href="#">Air Kicks</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="page-scroll"><a href="#middle">How Does It Work?</a></li>
+            <li class="page-scroll"><a href="#regester">Sign Up</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div id="outJumbotron" class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Welcome, Friends</h1>
+            <p>Air Kicks is a fun way to share your shoes to the World.</p>
+          </div>
+
+          <div class="col-md-4 col-md-offset-4">
+            <form id="signIn">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-6 col-md-4 col-form-label">Email</label>
+                <div class="col-sm-8">
+                  <input type="email" name="credentials[email]" class="form-control" id="loginEmail" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-6 col-md-4 col-form-label">Password</label>
+                <div class="col-sm-8">
+                  <input type="password" name="credentials[password]" class="form-control" id="loginPassword" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-4 col-md-2 col-md-offset-4">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <section id="middle">
+      <div class="container">
+        <h1 class="headline">How Dos It Work?</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://raw.githubusercontent.com/kailinc/airkicks-front-end/master/assets/img/001-shoe.png" class="demo">
+            <h2>Get Your Shoes</h2>
+            <p>Let's see what you have in your closet. You can choose which ones you want to showcase to others.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="https://raw.githubusercontent.com/kailinc/airkicks-front-end/master/assets/img/002-internet.png" class="demo">
+            <h2>Upload It</h2>
+            <p>You just need to fill in some information about your shoes. You can also create collections here.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="https://raw.githubusercontent.com/kailinc/airkicks-front-end/master/assets/img/003-cardiogram.png" class="demo">
+            <h2>Love It</h2>
+            <p>You can admire your shoes and collections online. You also can view other shoes and collections on Air Kicks</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="alert alert-success" role="alert" id="signUpSuccess">
+      You successfully signed up! Welcome to Air Kicks.
+    </div>
+
+    <div class="alert alert-danger" role="alert" id="signUpError">
+      Either the account is taken or the passwords don't match
+    </div>
+
+    <section id="regester">
+      <h1 class="headline">Sign Up</h1>
+      <div class="container">
+        <form id="signUp">
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-md-offset-3 col-form-label">Email</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" name="credentials[email]" id="signUpEmail" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-md-offset-3 col-form-label">Password</label>
+            <div class="col-sm-4">
+              <input type="password" class="form-control" name="credentials[password]" id="signUpPassword" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-md-offset-3 col-form-label">Password Confirmation</label>
+            <div class="col-sm-4">
+              <input type="password" class="form-control" name="credentials[password_confirmation]" id="confirmPassword" placeholder="Password Confirmation">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-2 col-sm-2 col-md-offset-5">
+              <button type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+  <!-- LANDING PAGE FOR INSIDE  -->
+
+  <div id="innerPage">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand em-text" href="#">Air Kicks</a>
+        </div>
+        <div id="navbarin" class="navbar-right">
+          <!-- Button trigger modal -->
+          <button oninvalid="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#changePwdModal">
+        Change Password
+      </button>
+          <button type="button" id="logOutBtn" class="btn btn-danger">Log Out</button>
+    </nav>
+
+    <div id='inJumbotron' class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">Awww YEAH!</h1>
+        <p class="lead">This is where you can showcase your shoe to the World!</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- BUTTONS  ALL SHOES, ALL COLLECTIONS, YOUR SHOES, YOUR COLLECTIONS ADD SHOES, ADD COLLECTIONS -->
+      <hr>
+      <div class="row">
+        <div class="col col-md-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+              </div>
+              <div class="col col-xs-12">
+                <button id="allShoesBtn" type="button" class="btn btn-success optionBtn">All Shoes</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+              </div>
+              <div class="col col-xs-12">
+                <button id="allColBtn" type="button" class="btn btn-success optionBtn">All Collections</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+              </div>
+              <div class="col col-xs-12">
+                <button id="userShoesBtn" type="button" class="btn btn-success optionBtn">View Your Shoes</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-xs-12">
+                <button id="userCollectionsBtn" type="button" class="btn btn-success optionBtn">View Your Collections</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-xs-12">
+                <!-- <button id="AddShoeBtn" type="button" class="btn btn-success optionBtn">Add Shoe</button> -->
+                <button oninvalid="" id="AddShoeBtn" type="button" class="btn btn-success optionBtn" data-toggle="modal" data-target="#addShoeModal">
+  Add Shoe
+</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-xs-12">
+                <button oninvalid="" id="createCollectionBtn" type="button" class="btn btn-success optionBtn" data-toggle="modal" data-target="#createCollectionModal">
+  Create Collection
+</button>
+                <!-- <button id="CreateCollectionBtn" type="button" class="btn btn-success optionBtn">Create Collection</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLACE FOR SHOES, COLLECTIONS TO BE SHOWN -->
+        <div class="col col-sm-8 col-md-8">
+          <div id="content" class="row">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- HOUSE OF MODALS -->
+
+
+    <!-- Modal  FOR CHANGING PASSWORDS-->
+    <div class="modal fade" id="changePwdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="true" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Change Password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div class="modal-body">
+
+            <form id="changePwd">
+              <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-4 col-form-label">Password</label>
+                <div class="col-sm-8">
+                  <input type="password" id="changePwdOld" name="passwords[old]" class="form-control" placeholder="Old Password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-4 col-form-label">Password</label>
+                <div class="col-sm-8">
+                  <input type="password" id="changePwdNew" name="passwords[new]" class="form-control" placeholder="New Password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-2 col-md-offset-5">
+                  <button type="submit" class="btn btn-primary">Change Password</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal CREATE SHOE -->
+    <div class="modal fade" id="addShoeModal" tabindex="-1" role="dialog" aria-labelledby="AddShoeModalLabel" data-backdrop="true" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Your Shoe</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+            <h3>You need a name and brand for your shoe</h3>
+
+            <form id="addShoeForm">
+              <div class="form-group row">
+                <label for="shoeName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" id="addShoeName" name="shoe[name]" class="form-control" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="shoeBrand" class="col-sm-2 col-form-label">Brand</label>
+                <div class="col-sm-10">
+                  <input type="text" id="addShoeBrand" name="shoe[brand]" class="form-control" placeholder="Brand">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="shoeCaption" class="col-sm-2 col-form-label">Caption</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" id="addShoeCap" name="shoe[caption]" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary">Add Shoe</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal CREATE COLLECTION -->
+    <div class="modal fade" id="createCollectionModal" tabindex="-1" role="dialog" aria-labelledby="AddShoeModalLabel" data-backdrop="true" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create a Collection</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+            <h3>You need a name for your collection</h3>
+            <form id="createCollectionForm">
+              <div class="form-group row">
+                <label for="shoeName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" id="addColName" name="collection[name]" class="form-control" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="shoeCaption" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" id="addColDes" name="collection[description]" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary">Create Collection</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDIT SHOE MODAL -->
+    <div id="editShoeModal" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Shoe</h5>
+            <h5 id="editShoeId"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div class="modal-body">
+            <h3>Shoe needs a name and a brand.</h3>
+            <form id="editShoeForm">
+              <div class="form-group row">
+                <label for="shoeName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" id="editShoeName" name="shoe[name]" class="form-control" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="shoeCaption" class="col-sm-2 col-form-label">Brand</label>
+                <div class="col-sm-10">
+                  <input type="text" id="editShoeBrand" name="shoe[brand]" class="form-control" placeholder="Brand">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="shoeCaption" class="col-sm-2 col-form-label">Caption</label>
+                <div class="col-sm-10">
+                  <input type="text" id="editShoeCap" name="shoe[caption]" class="form-control" placeholder="Caption">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary">Update Shoe</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EDIT COLLECTION MODAL -->
+    <div id="editColModal" class="modal fade">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Collection</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div class="modal-body">
+            <h5>Collection Id: </h5><p id="editColId"></p>
+            <h3>Collection needs a name.</h3>
+            <form id="editColForm">
+              <div class="form-group row">
+                <label for="shoeName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" id="editColName" name="collection[name]" class="form-control" placeholder="Name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="shoeCaption" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                  <input type="text" id="editColDes" name="collection[description]" class="form-control" placeholder="Description">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-sm-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary">Update Collection</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>
