@@ -15,6 +15,10 @@ const clearForms = function () {
   $('#signUpEmail').val('')
   $('#signUpPassword').val('')
   $('#confirmPassword').val('')
+
+  // clear User signIn forms
+  $('#loginEmail').val('')
+  $('#loginPassword').val('')
 }
 
 module.exports = {

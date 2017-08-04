@@ -23,14 +23,12 @@ const onSignInSuccess = function (data) {
   $('#innerPage').css('display', 'block')
   store.user = data.user
   $('#errorNotify').css('display', 'none')
-  $('#loginEmail').val('')
-  $('#loginPassword').val('')
+  uiActions.clearForms()
   $('#content').empty()
 }
 
 const onSignInError = function (error) {
-  $('#loginEmail').val('')
-  $('#loginPassword').val('')
+  uiActions.clearForms()
   $('#errorNotify').css('display', 'block').text("Either the password/username doesn't match or the account is taken.")
   // console.log(error)
 }
