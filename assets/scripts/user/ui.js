@@ -73,7 +73,7 @@ const onUserShoesSuccess = function (data) {
   $('#content').empty()
 
   if (data.user.shoes.length === 0) {
-    $('#errorNotify').css('display', 'block').text('You don\'t have any shoes.')
+    $('#errorNotify').css('display', 'block').text('You don\'t have any shoes. Add some shoes to see shoes.')
     $('#successNotify').css('display', 'none')
   } else {
     const showUserShoesHTML = showUserShoesTemplate({ shoes: data.user.shoes })
@@ -93,7 +93,7 @@ const onUserShoesError = function (error) {
 const onUserCollectionsSuccess = function (data) {
   $('#content').empty()
   if (data.user.collections.length === 0) {
-    $('#errorNotify').css('display', 'block').text('You don\'t have any collections.')
+    $('#errorNotify').css('display', 'block').text('You don\'t have any collections. Add some collections to see collections')
     $('#successNotify').css('display', 'none')
   } else {
     const showUserCollectionsHTML = showUserCollectionsTemplate({ collections: data.user.collections })
