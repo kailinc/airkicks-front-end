@@ -4,11 +4,10 @@ const showUserShoesTemplate = require('../templates/user-shoes.handlebars')
 const showUserCollectionsTemplate = require('../templates/user-collections.handlebars')
 const shoe = require('../shoe/events.js')
 const collection = require('../collection/events.js')
+const uiActions = require('../uiActions.js')
 
 const onSignUpSuccess = function () {
-  $('#signUpEmail').val('')
-  $('#signUpPassword').val('')
-  $('#confirmPassword').val('')
+  uiActions.clearForms()
   $('#signUpSuccess').css('display', 'block')
   $('#signUpError').css('display', 'none')
 }
@@ -16,9 +15,7 @@ const onSignUpSuccess = function () {
 const onSignUpError = function () {
   $('#signUpError').css('display', 'block')
   $('#signUpSuccess').css('display', 'none')
-  $('#signUpEmail').val('')
-  $('#signUpPassword').val('')
-  $('#confirmPassword').val('')
+  uiActions.clearForms()
 }
 
 const onSignInSuccess = function (data) {
