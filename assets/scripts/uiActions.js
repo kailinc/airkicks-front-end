@@ -19,6 +19,24 @@ const clearForms = function () {
   // clear User signIn forms
   $('#loginEmail').val('')
   $('#loginPassword').val('')
+
+  // clear change password forms
+  $('#changePwdOld').val('')
+  $('#changePwdNew').val('')
+
+  // clear form for adding shoe
+  $('#addShoeName').val('')
+  $('#addShoeBrand').val('')
+  $('#addShoeCap').val('')
+
+  // clear form for editing shoes
+  $('#editShoeName').val('')
+  $('#editShoeBrand').val('')
+  $('#editShoeCap').val('')
+
+  // clear form for adding collections
+  $('#addColDes').val('')
+  $('#addColName').val('')
 }
 
 module.exports = {
