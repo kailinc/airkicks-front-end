@@ -34,17 +34,15 @@ const onSignInError = function (error) {
 }
 
 const onChangePwdSuccess = function () {
+  uiActions.clearForms()
   $('#changePwdModal').modal('hide')
   $('#successNotify').css('display', 'block').text('You have changed your password')
   $('#errorNotify').css('display', 'none')
-  $('#changePwdOld').val('')
-  $('#changePwdNew').val('')
+
 }
 const onChangePwdError = function (error) {
-  // console.log(error)
+  uiActions.clearForms()
   $('#changePwdModal').modal('hide')
-  $('#changePwdOld').val('')
-  $('#changePwdNew').val('')
   $('#errorNotify').css('display', 'block').text('The password you gave was wrong')
   $('#successNotify').css('display', 'none')
 }
