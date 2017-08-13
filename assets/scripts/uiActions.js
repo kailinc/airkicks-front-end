@@ -23,6 +23,17 @@ const clearForms = function () {
   // clear change password forms
   $('#changePwdOld').val('')
   $('#changePwdNew').val('')
+
+  // clear form for adding shoe
+  $('#addShoeName').val('')
+  $('#addShoeBrand').val('')
+  $('#addShoeCap').val('')
+
+  // clear form for editing shoes
+  $('#editShoeName').val('')
+  $('#editShoeBrand').val('')
+  $('#editShoeCap').val('')
+
 }
 
 module.exports = {

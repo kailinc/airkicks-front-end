@@ -3,25 +3,22 @@ const shoeStore = require('../store')
 const user = require('../user/events.js')
 const showShoeTemplate = require('../templates/shoe.handlebars')
 const showShoesTemplate = require('../templates/shoes.handlebars')
+const uiActions = require('../uiActions.js')
 
 const onAddSuccess = function (data) {
+  uiActions.clearForms()
   $('#addShoeModal').modal('hide')
   $('#content').empty()
   $('#successNotify').css('display', 'block').text('Your shoe has been added.')
   $('#errorNotify').css('display', 'none')
-  $('#addShoeName').val('')
-  $('#addShoeBrand').val('')
-  $('#addShoeCap').val('')
 }
+
 const onAddError = function (error) {
+  uiActions.clearForms()
   $('#addShoeModal').modal('hide')
   $('#content').empty()
   $('#errorNotify').css('display', 'block').text('There was a problem adding your shoe.')
   $('#successNotify').css('display', 'none')
-  $('#addShoeName').val('')
-  $('#addShoeBrand').val('')
-  $('#addShoeCap').val('')
-  // console.log(error)
 }
 
 const onDestroySuccess = function (data) {
@@ -51,9 +48,6 @@ const onUpdateSuccess = function (data) {
   $('#editShoeModal').modal('hide')
   $('#successNotify').css('display', 'block').text('Your shoe has been updated.')
   $('#errorNotify').css('display', 'none')
-  $('#editShoeName').val('')
-  $('#editShoeBrand').val('')
-  $('#editShoeCap').val('')
 }
 
 const onUpdateError = function (error) {
@@ -62,9 +56,6 @@ const onUpdateError = function (error) {
   $('#content').empty()
   $('#errorNotify').css('display', 'block').text('There was a problem updating your shoe.')
   $('#successNotify').css('display', 'none')
-  $('#editShoeName').val('')
-  $('#editShoeBrand').val('')
-  $('#editShoeCap').val('')
 }
 
 const onIndexSuccess = function (data) {
