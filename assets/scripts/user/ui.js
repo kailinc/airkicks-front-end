@@ -4,11 +4,10 @@ const showUserShoesTemplate = require('../templates/user-shoes.handlebars')
 const showUserCollectionsTemplate = require('../templates/user-collections.handlebars')
 const shoe = require('../shoe/events.js')
 const collection = require('../collection/events.js')
+const uiActions = require('../uiActions.js')
 
 const onSignUpSuccess = function () {
-  $('#signUpEmail').val('')
-  $('#signUpPassword').val('')
-  $('#confirmPassword').val('')
+  uiActions.clearForms()
   $('#signUpSuccess').css('display', 'block')
   $('#signUpError').css('display', 'none')
 }
@@ -16,9 +15,7 @@ const onSignUpSuccess = function () {
 const onSignUpError = function () {
   $('#signUpError').css('display', 'block')
   $('#signUpSuccess').css('display', 'none')
-  $('#signUpEmail').val('')
-  $('#signUpPassword').val('')
-  $('#confirmPassword').val('')
+  uiActions.clearForms()
 }
 
 const onSignInSuccess = function (data) {
@@ -26,30 +23,26 @@ const onSignInSuccess = function (data) {
   $('#innerPage').css('display', 'block')
   store.user = data.user
   $('#errorNotify').css('display', 'none')
-  $('#loginEmail').val('')
-  $('#loginPassword').val('')
+  uiActions.clearForms()
   $('#content').empty()
 }
 
 const onSignInError = function (error) {
-  $('#loginEmail').val('')
-  $('#loginPassword').val('')
+  uiActions.clearForms()
   $('#errorNotify').css('display', 'block').text("Either the password/username doesn't match or the account is taken.")
   // console.log(error)
 }
 
 const onChangePwdSuccess = function () {
+  uiActions.clearForms()
   $('#changePwdModal').modal('hide')
   $('#successNotify').css('display', 'block').text('You have changed your password')
   $('#errorNotify').css('display', 'none')
-  $('#changePwdOld').val('')
-  $('#changePwdNew').val('')
+
 }
 const onChangePwdError = function (error) {
-  // console.log(error)
+  uiActions.clearForms()
   $('#changePwdModal').modal('hide')
-  $('#changePwdOld').val('')
-  $('#changePwdNew').val('')
   $('#errorNotify').css('display', 'block').text('The password you gave was wrong')
   $('#successNotify').css('display', 'none')
 }

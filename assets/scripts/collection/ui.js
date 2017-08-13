@@ -2,14 +2,14 @@
 const collectionStore = require('../store')
 const showCollectionTemplate = require('../templates/collection.handlebars')
 const showColsTemplate = require('../templates/collections.handlebars')
+const uiActions = require('../uiActions.js')
 
 const onAddSuccess = function (data) {
   $('#createCollectionModal').modal('hide')
   $('#content').empty()
   $('#successNotify').css('display', 'block').text('Your collection is created.')
   $('#errorNotify').css('display', 'none')
-  $('#addColDes').val('')
-  $('#addColName').val('')
+  uiActions.clearForms()
 }
 const onAddError = function (error) {
   // console.log(error)
@@ -17,8 +17,7 @@ const onAddError = function (error) {
   $('#content').empty()
   $('#errorNotify').css('display', 'block').text('There was a problem creating your collection.')
   $('#successNotify').css('display', 'none')
-  $('#addColDes').val('')
-  $('#addColName').val('')
+  uiActions.clearForms()
 }
 
 const onDeleteSuccess = function (data) {
@@ -48,8 +47,6 @@ const onUpdateSuccess = function (data) {
   $('#editColModal').modal('hide')
   $('#successNotify').css('display', 'block').text('Your collection has been updated.')
   $('#errorNotify').css('display', 'none')
-  $('#editColDes').val('')
-  $('#editColName').val('')
 }
 
 const onUpdateError = function (error) {
@@ -58,8 +55,6 @@ const onUpdateError = function (error) {
   $('#editColModal').modal('hide')
   $('#errorNotify').css('display', 'block').text('There was a problem with updating your collection.')
   $('#successNotify').css('display', 'none')
-  $('#editColDes').val('')
-  $('#editColName').val('')
 }
 
 const onIndexSuccess = function (data) {
