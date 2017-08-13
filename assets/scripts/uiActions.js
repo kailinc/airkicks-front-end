@@ -34,6 +34,9 @@ const clearForms = function () {
   $('#editShoeBrand').val('')
   $('#editShoeCap').val('')
 
+  // clear form for adding collections
+  $('#addColDes').val('')
+  $('#addColName').val('')
 }
 
 module.exports = {
